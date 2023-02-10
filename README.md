@@ -1,6 +1,6 @@
 # IDP FIP - Orbitz Rebrand
 
-New Orbitz - Rebrand Website and Product Design
+New Orbitz - Website Rebrand and Product Design
 
 ## Installation
 
