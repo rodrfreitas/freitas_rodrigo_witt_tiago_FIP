@@ -1,0 +1,27 @@
+========Desktop version========
+Font: Muli - Roboto - Orbitron - 33px
+hero frame: 1920x670
+logo: 375x375
+nav bar: 1920x130
+slogan: 1920x230
+product overview: 1920x996
+product renderer: 536x775
+product options: 1920x996
+product variation: 536x536
+social media stuff: 1920x996
+CTA: 1920x230
+footer: 1920x300
+
+========Mobile version========
+Font: Muli - Roboto - Orbitron - 19px
+hero frame: 375x375
+logo: 375x375
+nav bar: 375x75
+slogan: 375x375
+product overview: 375x863
+product renderer: 300x436
+product options: 375x802
+product variation: 300x300
+social media stuff: 375x863
+CTA: 375x375
+footer: 375x300
