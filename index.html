@@ -2,79 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>New Orbitz</title>
-    <link href="css/normalize.css" rel="stylesheet">
+    <!-- in mobile set initial zoom level of page to 100%, set site size to equal device width not a larger canvas that is shrunk down-->
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Orbitz :: Explore a New Universe of Favor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Mulish:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-    <h1 class="hidden">Orbitz - A new experience</h1>
-    <div class="container">
-        <header id="main-header" class="grid">
-            <div id="header-logo" class="box-color">
-            </div>
-            <nav id="header-nav" class="box-color">
-                <h2 class="hidden">Main Navigation</h2>
-            </nav>
-        </header>
-
-        <main>
-            <!-- HERO STUFF -->
-            <section id="hero" class="grid">
-                <div id="hero-image" class="box-color"></div>
-                <div id="hero-logo" class="box-color2"></div>
-                <div id="menu-stuff" class="box-color2">
-                    <h2>Menu stuff</h2>
-                </div>
-            </section>
-            <!-- SLOGAN STUFF -->
-            <section id="slogan-box1" class="grid">
-                <div id="slogan-text" class="box-color">
-                    <h2>Slogan</h2>
-                </div>
-            </section>
-            <!-- PRODUCT OVERVIEW -->
-            <section id="features-con" class="grid">
-                <h2 class="hidden">Product Overview</h2>
-                <section class="feature box-color">
-                    <h3>Product Description</h3>
-                </section>
-                <section class="feature box-color">
-                    <h3>Product Renderer</h3>
-                </section>
-            </section>
-            <!-- SLOGAN STUFF 2 -->
-            <section id="slogan-box2" class="grid">
-                <div id="slogan-text2" class="box-color2">
-                    <h2>Slogan text 2</h2>
-                </div>
-            </section>
-            <!-- PRODUCT OPTIONS -->
-            <section id="product-options-con" class="grid">
-                <h2 class="hidden">Product Options</h2>
-                <section class="product-options box-color">
-                    <h3>Flavor 1</h3>
-                </section>
-                <section class="product-options box-color">
-                    <h3>Flavor 2</h3>
-                </section>
-            </section>
-            <!-- SOCIAL NEDIA STUFF -->
-            <section id="social-box" class="grid">
-                <div id="social-text" class="box-color2">
-                    <h2>Socia media stuff</h2>
-                </div>
-            </section>
-        </main>
-    </div>
-    <div id="footer-con-full" class="box-color">
-        <div class="container">
-            <footer class="grid">
-                <nav id="footer-nav" class="box-color2">
-                    <h2 class="hidden">Footer Navigation</h2>
-                </nav>
-            </footer>
+    <h1 class="hidden">Main Page</h1>
+    <!-- hero-con-full only displays above 768px screns wide -->
+    <section class="grid-con" id="hero-con-full">
+        <h2 class="hidden">Hero Video / GIF</h2>
+        <div id="hero-logo" class="col-span-full">
+            <img src="images/logo_white.svg" alt="Orbitz Logo">
         </div>
-    </div>
+    </section>
+
+    <header class="grid-con" id="main-header">
+        <div id="main-logo" class="col-start-1 col-end-3 m-col-start-1 m-col-end-3 l-col-start-2 l-col-end-3">
+            <img src="images/logo.svg" alt="Orbitz Logo">
+        </div>
+        <nav id="main-nav" class="col-start-4 col-end-5 m-col-span-10 l-col-span-9">
+            <h2 class="hidden">Main Navigation</h2>
+            <button id="button"></button>
+            <div id="burger-con">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="contact_mobile.html">Contact</a></li>
+                    <li><a href="#">Store</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="grid-con" id="hero-con">
+            <h2 class="hidden">Section divider + Text</h2>
+            <div id="section-separator-text" class="col-span-full l-col-start-2 l-col-end-12 xl-col-start-3 xl-col-end-11">
+                <h2>Indulge in the tantalizing taste and unique texture of Orbitz - a soft drink experience like no other</h2>
+            </div>
+        </section>
+
+        <section class="grid-con" id="product-teaser">
+            <h2 class="hidden">Product Teaser</h2>
+            <div id="product-teaser-section" class="col-span-full l-col-start-2 l-col-end-12">
+                <h2>Escape to a new world with every sip of Orbitz</h2>
+                <div id="product-teaser-img">
+                    <img src="images/orbitz_bottles.png" alt="Orbitz Flavors">
+                </div>
+            </div>
+        </section>
+
+        <section class="grid-con" id="section-divider">
+            <h2 class="hidden">Section divider + Text</h2>
+            <div id="section-separator-text-2" class="col-span-full l-col-start-2 l-col-end-12 xl-col-start-3 xl-col-end-11">
+                <h2>Expect a burst of bold and exciting flavors in every bottle of Orbitz - the ultimate thirst-quenching experience</h2>
+            </div>
+        </section>
+
+        <section class="grid-con" id="product-overview">
+            <h2 class="hidden">Product Overview</h2>
+            <div id="product-overview-title" class="col-span-full l-col-start-2 l-col-end-17">
+                <h2>Take your taste buds on a journey with Orbitz. Available in three delicious and distinct flavor options</h2>
+            </div>
+            <div id="orbitz-card" class="col-span-full m-col-span-4 l-col-start-2 l-col-span-5">
+                <h3>Orbitz - Kiwi</h3>
+                <img src="images/orbitz-kiwi.png" alt="Orbitz Kiwi">
+                <p id="kiwi">
+                    <span>Orbitz Kiwi</span> is a refreshing soft drink with a burst of tangy kiwi flavor that will transport you to a tropical paradise with every sip.
+                </p>
+            </div>
+            <div id="orbitz-card" class="col-span-full m-col-span-4 l-col-span-5">
+                <h3>Orbitz - Orange</h3>
+                <img src="images/orbitz-orange.png" alt="Orbitz Orange">
+                <p id="orange">
+                    <span>Orbitz Orange</span> is a zesty and sweet soft drink that delivers a bold and juicy orange flavor in every sip.
+                </p>
+            </div>
+            <div id="orbitz-card" class="col-span-full m-col-span-4 l-col-span-5">
+                <h3>Orbitz - Strawberry</h3>
+                <img src="images/orbitz-strawberry.png" alt="Orbitz Strawberry">
+                <p id="strawberry">
+                    <span>Orbitz Strawberry</span> is perfect for any occasion, from a casual picnic to a fun night out with friends.
+                </p>
+            </div>
+        </section>
+
+        <section class="grid-con " id="social-wall">
+            <h2 class="hidden">Social Wall</h2>
+            <div id="social-wall" class="col-span-full l-col-start-2 l-col-end-12">
+                <h2>Ready to join the Orbitz orbit and stay in the loop? Follow us on social media!</h2>
+                <div id="social-media-icons">
+                    <img src="images/instagram.svg" alt="Instagram">
+                    <img src="images/facebook.svg" alt="Facebook">
+                    <img src="images/twitter.svg" alt="Twitter">
+                    <img src="images/youtube.svg" alt="YouTube">
+                </div>
+            </div>
+        </section>
+
+        <section class="grid-con" id="section-divider-2">
+            <h2 class="hidden">Section Divider</h2>
+            <div id="cta-section" class="col-span-full l-col-start-2 l-col-end-12 xl-col-start-3 xl-col-end-11">
+                <h2>Experience the out-of-this-world taste of Orbitz. Buy now and quench your thirst in style!</h2>
+                <button id="cta-button" onclick="location.href='contact_mobile.html'">I want Orbitz</button>
+            </div>
+        </section>
+
+        <section class="grid-con" id="footer">
+            <h2 class="hidden">Footer</h2>
+            <div id="footer-info" class="col-span-full ">
+                <p>© Orbitz. Orbitz RXT Inc. Headquarters are in London, Ontario, Canada</p>
+                <div><img src="images/logo.svg" alt="Orbitz Logo"></div>
+            </div>
+        </section>
+    </main>
+    <!-- Link to JS file at bottom, just before closing body tag -->
     <script src="js/main.js"></script>
 </body>
 </html>
