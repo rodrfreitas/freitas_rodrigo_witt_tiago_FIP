@@ -1,176 +1,549 @@
 /* 
+    CSS Guide 
 
-    CSS Guide
+    1.  General Styles
+    2.  Main Nav
+    3.  Main Hero
+    4.  Main Hero Image Contact
+    5.  Why Couples Resort
+    6.  About & FAQ
+    7.  Contact Form
+    8.  Footer
+    9.  Custom Queries
+    10. Tablet Queries
+    11. Desktop Queries 
+ */
 
-    1. General Styles
-    2. Grid
-    3. Header
-    4. Main Hero Image
-    5. Features
-    6. Footer
 
-*/
-
-/* 1. ---General Styles--- */
-
+ /* 1. ---General Styles--- */
 
 .hidden {
     display: none;
 }
 
-.container {
-    width: 1200px;
-    margin: 0 auto;
+body {
+    color: #2e2e2e;
+    font-family: 'Lato',Arial, Helvetica, sans-serif;
 }
 
-.box-color{
-    background-color: black;
+a {
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+
+input, textarea {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. ---Main Nav--- */
+#main-logo{
+    order: -1;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#main-nav {
+    text-align: right;
+}
+
+#main-nav button {
+   width: 40px;
+   height: 40px;
+   background: url(../images/burger.svg) no-repeat center;
+   margin-top: 35px;
+   margin-bottom: 20px;
+   transition: all .5s ease;
+   border: 0;
+ }
+
+ #main-nav button.expanded {
+    transform: rotate(90deg);
+    position: relative;
+    z-index: 3;
+ }
+ 
+ #burger-con {
+    display: none;
+ }
+ 
+ #burger-con.slide-toggle {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    background-color: #7b27c8;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+ }
+
+ #main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 80px 0px 0px 0px;
+ }
+ 
+ #main-nav ul li a {
+    display: block;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    color: #626262;
+    font-size: 35px;
+    color: #fff;
+ }
+ 
+ #main-nav ul li a:hover {
+    color: #df551e;
+ }
+ 
+ #main-nav ul li:last-child {
+    margin-bottom: 10px;
+ }
+ 
+
+/* 3. ---Main Hero--- */
+
+#hero-con-full {
+    display: none;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.562)),url(/images/video.gif);
+    background-size: cover;
+    background-position: bottom;
+}
+
+#hero-logo img {
+    padding: 80px;
+    width: 400px;
+}
+
+#hero-con {
+    height: 200px;
+    background: linear-gradient(rgba(255, 2, 255, 0.45), rgba(0, 0, 0, 0.10)),url(/images/section-separator.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+#section-separator-text {
+    margin: auto;
+}
+
+#hero-con h2 {
+    font-family: 'Mulish',Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
     color: #fff;
     text-align: center;
+    line-height: 32px;
 }
 
-.box-color2{
-    background-color: #a7a7a7;
+#contact-text {
+    display: none;
+}
+
+ /* 3. ---Main Content--- */
+
+ #product-teaser {
+    margin: auto;
+ }
+
+ #product-teaser-img {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+ }
+
+ #product-teaser-img img {
+    width: 64%;
+ }
+
+ #product-teaser h2 {
+    font-family: 'Mulish', Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: 900;
+    font-size: 32px;
+    padding-top: 20px;
+    color: rgb(230, 81, 12);
+    line-height: 42px;
+ }
+
+
+#section-divider {
+    height: 200px;
+    background-color: grey;
+    background: linear-gradient(rgba(148, 11, 175, 0.808), rgba(210, 26, 216, 0.45)),url(/images/section-separator.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+ #section-separator-text-2 {
+    margin: auto;
+ }
+
+ #section-separator-text-2 h2 {
+    font-family: 'Mulish',Arial, Helvetica, sans-serif;
+    font-size: 22px;
     color: #fff;
     text-align: center;
+    line-height: 32px;
+ }
+
+ #product-overview {
+    margin: auto;
+    margin-bottom: 20px;
+ }
+
+#product-overview h2 {
+    font-family: 'Mulish', Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: auto;
+    font-size: 22px;
+    padding-top: 20px;
+    color: rgb(230, 81, 12);
+    line-height: 32px;
+    margin-bottom: 10px;
 }
 
-/* 2. ---Grid--- */
-
-/* this is the exact same grid used in Adobe XD, we have recreated 
-the grid using CSS. It is a class becasue we will use multiple grids */
-
-.grid{
-    display: grid;
-    padding-left: 15px;
-    padding-right: 15px;
-    grid-template-columns: repeat(12, 70px);
-    grid-column-gap: 30px;
+#orbitz-card {
+    border: solid 2px rgb(230, 81, 12);
+    border-radius: 12px;
+    /* background-color: #e9e9e9; */
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:10px;
 }
 
+#orbitz-card h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
 
-/* 3. ---Header--- */
+#kiwi span {
+    font-weight: bold;
+    color: green;
+}
 
-#main-header{
+#orange span {
+    font-weight: bold;
+    color: #df551e;
+}
+
+#strawberry span {
+    font-weight: bold;
+    color:crimson;
+}
+
+#orbitz-card:hover span {
+    color: #fff;
+}
+
+#orbitz-card img {
+    height: 380px;
+    margin-bottom: 20px;
+}
+
+#orbitz-card p {
+    font-size: 18px;
+}
+
+#orbitz-card:hover {
+    background-color: #df551e;
+    color: #fff;
+}
+
+#social-wall {
+    /* height: 800px; */
+    text-align: center;
+    background-color: #e0720b;
+    background: linear-gradient(rgba(252, 99, 10, 0.699), rgba(0, 0, 0, 0.726)),url(../images/orbitz_bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#social-wall h2 {
+    font-family: 'Mulish',Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-#header-logo{
-    height: 100px;
-    width: 270px;
-    grid-column: 1/4;
+#social-media-icons {
+    display: flex;
+    justify-content: center;
 }
 
-#header-nav{
-    height: 70px;
-    width: 570px;
-    grid-column: 7/-1;
-    margin-top: 15px;
+#social-media-icons img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(323deg) brightness(102%) contrast(101%);
+    margin: 0 14px;
+    margin-bottom: 40px;
+    width: 40px;
+    height: 40px;
 }
 
-
-/* 4. ---Main Hero Image--- */
-
-#hero {
-    margin-top: 70px;
+#cta-section {
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:10px;
 }
 
-#hero-image{
-    grid-column: 1/-1;
-    width: 1170px;
-    height: 670px;
-    grid-row: 1/3;
+#cta-section h2 {
+    font-family: 'Mulish', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 22px;
+    color: rgb(230, 81, 12);
+    line-height: 32px;
+    margin-bottom: 32px;
 }
 
-#hero-logo {
-    width: 357px;
-    height: 357px;
-    grid-row: 1/2;
-    grid-column: 5/-1;
-    margin-top: 100px;
+#cta-button {
+    background-color: #7b27c8;
+    color: #fff;
+    padding: 10px 80px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 5px;
 }
 
-#menu-stuff {
-    grid-column: 1/-1;
-    height: 130px;
-    width: 1170px;
-    grid-row: 2/3;
-    align-self: end;
+/* x ---Footer--- */
+
+#footer {
+    background-color: rgb(230, 81, 12);
+    padding: 60px 20px 60px 20px;
 }
 
-/* 5. ---Features--- */
-
-#features-con {
-    margin-top: 0px;
-}
-
-.feature {
-    width: 536px;
-    height: 775px;
-    grid-column: span 6;
-}
-
-#slogan-box1 {
-    grid-column: 1/-1;
-    width: 1170px;
-    height: 230px;
-    grid-row: 1/3;
-
-}
-
-#slogan-text {
-    grid-column: 1/-1;
+#footer-info {
     text-align: center;
 }
 
-#slogan-box2 {
-    grid-column: 1/-1;
-    width: 1170px;
-    height: 230px;
-    grid-row: 1/3;
-
+#footer-info p {
+    color: #fff;
+    margin-bottom: 20px;
 }
 
-#slogan-text2 {
-    grid-column: 1/-1;
-    text-align: center;
+/* 4. ---Tablet--- */
+
+@media screen and (min-width: 768px){
+    #hero-con-full{
+        display: block;
+    }
+    #contact-text {
+        display: block;
+    }
+
+    #button {
+        display: none;
+     }
+  
+     #burger-con {
+        display: block;
+        font-size: 12px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+     }
+  
+     #burger-con ul li {
+        display: inline;
+     }
+  
+  
+     #burguer-con.slide-toggle {
+        height: auto;
+        width: auto;
+        background: none;
+        z-index: auto;
+        position: static;
+     }
+     
+     #main-nav {
+        padding-top: 20px;
+        margin: center;
+     }
+
+     #main-nav ul {
+        margin: 0;
+        /* border-left: solid 1px #2e2e2e; */
+        /* padding-left: 60px; */
+        /* margin-right: 120px; */
+     }
+  
+     #main-nav ul li a {
+        display: inline;
+        color: #2e2e2e;
+        font-size: 28px;
+     }
+  
+     #burger-con ul li {
+        margin-right: 28px;
+     }
+  
+     #burger-con ul li:last-child {
+        margin-right: 0px;
+     }
+
+    #hero-con h2 {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    #product-teaser-section {
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    #section-separator-text-2 h2 {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    #product-teaser-section h2 {
+        font-family: 'Mulish', Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        text-align: left;
+        font-size: 48px;
+        line-height: 72px;
+    }
+
+    #product-teaser-img img {
+        width: 700px;
+    }
+
+    #product-overview {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    #product-overview-title h2 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 42px;
+    }
+
+    #orbitz-card {
+        margin-bottom: 32px;
+    }
+
+    #orbitz-card h3 {
+        font-size: 18px;
+    }
+
+    #social-wall h2 {
+        font-weight: 900;
+        text-align: center;
+        font-size: 42px;
+        line-height: 52px;
+        padding-top: 40px;
+    }
+
+    #social-media-icons {
+        padding-bottom: 42px;
+    }
+
+    #cta-section {
+        margin-top: 42px;
+        margin-bottom: 42px;
+    }
+
+    #cta-section h2 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    #footer {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
 }
 
-#product-options-con {
-    margin-top: 0px;
+/* 4. ---Desktop 1200--- */
+
+@media screen and (min-width: 1200px){
+
+    #burger-con {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    #product-teaser-section h2 {
+        font-family: 'Mulish', Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        text-align: left;
+        font-size: 62px;
+        line-height: 92px;
+        /* padding-right: 70px; */
+    }
+
+    #product-overview {
+        grid-template-columns: repeat(17, minmax(0, 1fr));
+    }
+
+    #product-overview-title h2 {
+        margin-right: 80px;
+    }
 }
 
-.product-options {
-    width: 536px;
-    height: 536px;
-    grid-column: span 6;
-}
+/* 4. ---Desktop 1200--- */
 
+@media screen and (min-width: 1920px){
 
-#social-box {
-    grid-column: 1/-1;
-    width: 1170px;
-    height: 996px;
-    grid-row: 1/3;
+    #burger-con {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
-}
+    #hero-con h2 {
+        font-size: 36px;
+        line-height: 52px;
+    }
 
-#social-text {
-    grid-column: 1/-1;
-    text-align: center;
-}
+    #product-teaser-section h2 {
+        width: 1250px;
+        font-family: 'Mulish', Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        text-align: left;
+        font-size: 92px;
+        line-height: 118px;
+        padding-right: 90px;
+    }
 
+    #section-separator-text-2 h2 {
+        font-size: 36px;
+        line-height: 52px;
+    }
 
-/* 6. ---Footer--- */
+    #orbitz-card img {
+        height: 580px;
+        margin-bottom: 20px;
+    }
 
-#footer-con-full {
-    height: 100px;
-}
+    #social-wall {
+        height: 800px;
+    }
 
-#footer-nav {
-    width: 640px;
-    height: 70px;
-    margin-top: 15px;
-    grid-column: 1/8;
-    margin-left: 15px;
+    #social-wall h2 {
+        font-weight: 900;
+        text-align: center;
+        font-size: 70px;
+        line-height: 82px;
+        padding-top: 200px;
+    }
+
+    #cta-section h2 {
+        font-size: 38px;
+        line-height: 52px;
+    }
+
 }
