@@ -139,9 +139,7 @@ input, textarea {
     line-height: 32px;
 }
 
-#contact-text {
-    display: none;
-}
+
 
  /* 3. ---Main Content--- */
 
@@ -190,6 +188,85 @@ input, textarea {
     text-align: center;
     line-height: 32px;
  }
+
+#store-products {
+    margin: auto;
+    background-color: #f1f1f1;
+}
+
+#store-overview-title {
+    text-align: center;
+}
+
+#store-overview-title h2 {
+    font-family: 'Mulish',Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: #df551e;
+    letter-spacing: 2px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+#store-overview-title p {
+    font-family: 'Lato',Arial, Helvetica, sans-serif;
+    color: #2e2e2e;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 22px;
+}
+
+#store-overview-title p span{
+    color: #7b27c8;
+    font-weight: 600;
+}
+
+#store-card {
+    border: solid 2px #7b27c8;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+#store-card:last-child {
+    margin-bottom: 20px;
+}
+
+.store-price{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#store-card h3 {
+    width: 30%;
+    font-size: 14px;
+    color: #df551e;
+    padding: 8px;
+    margin-bottom: 26px;
+    border: solid 1px #df551e;
+    border-radius: 12px;
+}
+
+#sold-out span {
+    color: red;
+}
+
+#disabled-button {
+    background-color: #626262;
+    opacity: 0.6;
+}
+
+#store-card img {
+    height: 280px;
+    margin-bottom: 20px;
+}
+
+#store-card p {
+    font-size: 18px;
+}
 
  #product-overview {
     margin: auto;
@@ -313,7 +390,67 @@ input, textarea {
     font-size: 18px;
     cursor: pointer;
     margin-bottom: 5px;
+    width: 300px;
 }
+
+/* x ---Contact Form---*/
+
+#form-section {
+    background-color: #f1f1f1;
+    padding-top: 42px;
+    padding-bottom: 46px;
+    text-align: center;
+}
+
+#form-section h2 {
+    font-family: 'Mulish', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgb(230, 81, 12);
+    margin-bottom: 32px;
+}
+
+#form {
+    font-family: 'Lato',Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: #7b27c8;
+    text-align: left;
+}
+
+input[type=text], input[type=email], textarea {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 100%;
+    border: solid 1px #df551e;
+    border-radius: 5px;
+    font-size: 22px;
+}
+
+input:hover {
+    border: solid 1px #7b27c8;
+}
+
+textarea:hover {
+    border: solid 1px #7b27c8;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    background-color: #df551e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Form Stuff - END */
 
 /* x ---Footer--- */
 
@@ -321,6 +458,7 @@ input, textarea {
     background-color: rgb(230, 81, 12);
     padding: 60px 20px 60px 20px;
 }
+
 
 #footer-info {
     text-align: center;
@@ -331,6 +469,15 @@ input, textarea {
     margin-bottom: 20px;
 }
 
+#footer-alt {
+    background-color: #fff;
+    padding: 60px 20px 60px 20px;
+}
+
+#footer-alt p {
+    color: #7b27c8;
+}
+
 /* 4. ---Tablet--- */
 
 @media screen and (min-width: 768px){
@@ -338,7 +485,15 @@ input, textarea {
         display: block;
     }
     #contact-text {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact-text h2 {
+        text-align: left;
+        font-size: 28px;
+        line-height: 42px;
     }
 
     #button {
@@ -462,6 +617,18 @@ input, textarea {
         line-height: 42px;
     }
 
+    #store-card {
+        margin-bottom: 20px;
+    }
+
+    #store-card:last-child {
+        margin-bottom: 50px;
+    }
+
+    #store-card:nth-last-child(2){
+        margin-bottom: 50px;
+    }
+
     #footer {
         padding-top: 72px;
         padding-bottom: 72px;
@@ -493,9 +660,27 @@ input, textarea {
     #product-overview-title h2 {
         margin-right: 80px;
     }
+
+    #contact-text h2 {
+        line-height: 52px;
+    }
+
+    #store-overview-title h2 {
+        font-family: 'Mulish',Arial, Helvetica, sans-serif;
+        font-size: 35px;
+        letter-spacing: 2px;
+        margin-top: 22px;
+        margin-bottom: 22px;
+    }
+    
+    #store-overview-title p {
+        color: #2e2e2e;
+        font-size: 20px;
+        line-height: 26px;
+    }
 }
 
-/* 4. ---Desktop 1200--- */
+/* 4. ---Desktop 1920--- */
 
 @media screen and (min-width: 1920px){
 
