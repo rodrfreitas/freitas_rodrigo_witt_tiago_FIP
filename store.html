@@ -2,44 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- in mobile set initial zoom level of page to 100%, set site size to equal device width not a larger canvas that is shrunk down-->
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Orbitz :: Store</title>
-    <!-- Link to reset or normalize before main.css
-    only choose one -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Mulish:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
     <h1 class="hidden">Online Store Page</h1>
     <header class="grid-con" id="main-header">
-        <h2 class="hidden">Main Header</h2>
-        <nav class="box col-start-2 col-end-5 m-col-start-4 m-col-end-13 l-col-start-5 l-col-end-13" id="main-nav">
-            <h2 class="hidden">Web Nav</h2>
-            Nav
+        <div id="main-logo" class="col-start-1 col-end-3 m-col-start-1 m-col-end-3 l-col-start-2 l-col-end-3">
+            <img src="images/logo.svg" alt="Orbitz Logo">
+        </div>
+        <nav id="main-nav" class="col-start-4 col-end-5 m-col-span-10 l-col-span-9">
+            <h2 class="hidden">Main Navigation</h2>
+            <button id="button"></button>
+            <div id="burger-con">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="store.html">Store</a></li>
+                </ul>
+            </div>
         </nav>
-    <div class="box col-start-1 col-end-2 m-col-start-1 m-col-end-3 l-col-end-4" id="main-logo">
-        Logo
-    </div>
     </header>
 
     <main>
         <section class="grid-con" id="store-products">
             <h2 class="hidden">Store Products</h2>
-            <div class="box col-span-full m-col-span-6">Product 01</div>
-            <div class="box col-span-full m-col-span-6">Product 02</div>
-            <div class="box col-span-full m-col-span-6">Product 03</div>
-            <div class="box col-span-full m-col-span-6">Product 04</div>
+            <div id="store-overview-title" class="col-span-full l-col-start-2 l-col-end-12 xl-col-start-3 xl-col-end-11">
+                <h2>ORBITZ ONLINE STORE</h2>
+                <p><span>Attention all Orbitz fans!</span> The wait is over! Orbitz drinks are back and they're better than ever! <span>For a limited time only</span>, you can get your hands on the iconic and bubbly Orbitz drinks at the Orbitz Online Store</p>
+            </div>
+            <div id="store-card" class="col-span-full m-col-span-6 l-col-start-2 l-col-span-5 xl-col-start-3 xl-col-span-4">
+                <h3>In stock</h3>
+                <img src="images/orbitz-kiwi.png" alt="Orbitz Kiwi">
+                <h2 id="kiwi"><span>Orbitz Kiwi</span></h2>
+                <p>450 ml bottle</p>
+                <h2 class="store-price">$2.95</h2>
+                <button id="cta-button" onclick="location.href='404.html'">Add to cart</button>
+            </div>
+            <div id="store-card" class="col-span-full m-col-span-6 l-col-span-5 xl-col-span-4">
+                <h3>Best Seller</h3>
+                <img src="images/orbitz-orange.png" alt="Orbitz Orange">
+                <h2 id="orange"><span>Orbitz Orange</span></h2>
+                <p>450 ml bottle</p>
+                <h2 class="store-price">$2.95</h2>
+                <button id="cta-button" onclick="location.href='404.html'">Add to cart</button>
+            </div>
+            <div id="store-card" class="col-span-full m-col-span-6 l-col-start-2 l-col-span-5 xl-col-start-3 xl-col-span-4">
+                <h3 id="sold-out"><span>Sold Out</span></h3>
+                <img src="images/orbitz-strawberry.png" alt="Orbitz Strawberry">
+                <h2 id="strawberry"><span>Orbitz Kiwi</span></h2>
+                <p>450 ml bottle</p>
+                <h2 class="store-price">$2.95</h2>
+                <button id="disabled-button">Sold Out</button>
+            </div>
+            <div id="store-card" class="col-span-full m-col-span-6 l-col-span-5 xl-col-span-4">
+                <h3><span>Soon</span></h3>
+                <img src="images/orbitz-secret.png" alt="Orbitz Secret">
+                <h2><span>Unannounced Flavour</span></h2>
+                <p>450 ml bottle</p>
+                <h2 class="store-price">$2.95</h2>
+                <button id="disabled-button">Coming Soon</button>
+            </div>
         </section>
-
-        <section class="grid-con" id="footer">
-            <h2 class="hidden">Footer</h2>
-            <div class="box col-span-full ">
-                Footer
+        <section class="grid-con " id="social-wall">
+            <h2 class="hidden">Social Wall</h2>
+            <div id="social-wall" class="col-span-full l-col-start-2 l-col-end-12">
+                <h2>Follow us now and get ready to blast off into a new orbit!</h2>
+                <div id="social-media-icons">
+                    <img src="images/instagram.svg" alt="Instagram">
+                    <img src="images/facebook.svg" alt="Facebook">
+                    <img src="images/twitter.svg" alt="Twitter">
+                    <img src="images/youtube.svg" alt="YouTube">
+                </div>
             </div>
         </section>
     </main>
-    <!-- Link to JS file at bottom, just before closing body tag -->
+    <footer>
+        <section class="grid-con" id="footer-alt">
+            <h2 class="hidden">Footer</h2>
+            <div id="footer-info" class="col-span-full ">
+                <p>© Orbitz. Orbitz RXT Inc. Headquarters are in London, Ontario, Canada</p>
+                <div><img src="images/logo.svg" alt="Orbitz Logo"></div>
+            </div>
+        </section>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>
