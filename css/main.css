@@ -37,6 +37,7 @@ input, textarea {
     padding: 0;
 }
 
+
 /* 2. ---Main Nav--- */
 #main-logo{
     order: -1;
@@ -170,7 +171,10 @@ input, textarea {
 
 
 #section-divider {
-    height: 200px;
+    /* height: 200px; */
+    text-align: center;
+    padding-top: 28px;
+    padding-bottom: 28px;
     background-color: grey;
     background: linear-gradient(rgba(148, 11, 175, 0.808), rgba(210, 26, 216, 0.45)),url(/images/section-separator.jpg);
     background-size: cover;
@@ -187,6 +191,7 @@ input, textarea {
     color: #fff;
     text-align: center;
     line-height: 32px;
+    margin-bottom: 18px;
  }
 
 #store-products {
@@ -478,6 +483,43 @@ button {
     color: #7b27c8;
 }
 
+/* x ---404 Page--- */
+
+#page-404-content {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    padding: 30px;
+}
+
+#page-404-content img {
+    width: 50%;
+}
+
+#page-404-content h2 {
+    font-family: 'Mulish', Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#page-404-content p {
+    color: #fff;
+    margin-bottom: 62px;
+}
+
+.gradient-page {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: rgb(131,58,180);
+    background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 75%, rgba(252,176,69,1) 100%);
+  }
+
+
+
 /* 4. ---Tablet--- */
 
 @media screen and (min-width: 768px){
@@ -633,6 +675,11 @@ button {
         padding-top: 72px;
         padding-bottom: 72px;
     }
+
+    #video-promo {
+        height: 360px;
+        width: 640px;
+    }
 }
 
 /* 4. ---Desktop 1200--- */
@@ -660,6 +707,19 @@ button {
     #product-overview-title h2 {
         margin-right: 80px;
     }
+
+    #section-separator-text-2 {
+        display: flex;
+        align-items: center;
+        padding-bottom: 25px;
+    }
+
+    #section-separator-text-2 h2 {
+        text-align: left;
+        width: 60%;
+        padding-right: 20px;
+    }
+
 
     #contact-text h2 {
         line-height: 52px;
@@ -704,15 +764,21 @@ button {
         padding-right: 90px;
     }
 
+    #section-separator-text-2 {
+        padding-top: 65px;
+        padding-bottom: 50px;
+    }
+
     #section-separator-text-2 h2 {
-        font-size: 36px;
-        line-height: 52px;
+        font-size: 48px;
+        line-height: 76px;
     }
 
     #orbitz-card img {
         height: 580px;
         margin-bottom: 20px;
     }
+    
 
     #social-wall {
         height: 800px;
@@ -729,6 +795,11 @@ button {
     #cta-section h2 {
         font-size: 38px;
         line-height: 52px;
+    }
+
+    #video-promo {
+        height: 360px;
+        width: 640px;
     }
 
 }
