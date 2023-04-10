@@ -23,7 +23,7 @@
 
     <header class="grid-con" id="main-header">
         <div id="main-logo" class="col-start-1 col-end-3 m-col-start-1 m-col-end-3 l-col-start-2 l-col-end-3">
-            <img src="images/logo.svg" alt="Orbitz Logo">
+            <a href="index.html"><img src="images/logo.svg" alt="Orbitz Logo"></a>
         </div>
         <nav id="main-nav" class="col-start-4 col-end-5 m-col-span-10 l-col-span-9">
             <h2 class="hidden">Main Navigation</h2>
@@ -76,8 +76,9 @@
                 <h3>Orbitz - Kiwi</h3>
                 <img src="images/orbitz-kiwi.png" alt="Orbitz Kiwi">
                 <p id="kiwi">
-                    <span>Orbitz Kiwi</span> is a refreshing soft drink with a burst of tangy kiwi flavor that will transport you to a tropical paradise with every sip.
+                    <span>Orbitz Kiwi</span> is a refreshing soft drink with a burst of tangy kiwi flavor.
                 </p>
+                <button onclick="window.location.href='#lightbox'; document.body.style.overflow='hidden';" data-member="kiwi">Promo details</button>
             </div>
             <div id="orbitz-card" class="col-span-full m-col-span-4 l-col-span-5">
                 <h3>Orbitz - Orange</h3>
@@ -85,6 +86,7 @@
                 <p id="orange">
                     <span>Orbitz Orange</span> is a zesty and sweet soft drink that delivers a bold and juicy orange flavor in every sip.
                 </p>
+                <button onclick="window.location.href='#lightbox'; document.body.style.overflow='hidden';" data-member="orange">Promo details</button>
             </div>
             <div id="orbitz-card" class="col-span-full m-col-span-4 l-col-span-5">
                 <h3>Orbitz - Strawberry</h3>
@@ -92,6 +94,7 @@
                 <p id="strawberry">
                     <span>Orbitz Strawberry</span> is perfect for any occasion, from a casual picnic to a fun night out with friends.
                 </p>
+                <button onclick="window.location.href='#lightbox'; document.body.style.overflow='hidden';" data-member="strawberry">Promo details</button>
             </div>
         </section>
 
@@ -100,10 +103,12 @@
             <div id="social-wall" class="col-span-full l-col-start-2 l-col-end-12">
                 <h2>Ready to join the Orbitz orbit and stay in the loop? Follow us on social media!</h2>
                 <div id="social-media-icons">
-                    <img src="images/instagram.svg" alt="Instagram">
-                    <img src="images/facebook.svg" alt="Facebook">
-                    <img src="images/twitter.svg" alt="Twitter">
-                    <img src="images/youtube.svg" alt="YouTube">
+                    <a href="404.html">
+                        <img src="images/instagram.svg" alt="Instagram">
+                        <img src="images/facebook.svg" alt="Facebook">
+                        <img src="images/twitter.svg" alt="Twitter">
+                        <img src="images/youtube.svg" alt="YouTube">
+                    </a>
                 </div>
             </div>
         </section>
@@ -125,6 +130,22 @@
             </div>
         </section>
     </footer>
+
+    <!-- lightbox goes here -->
+    <section class="grid-con lightbox" id="lightbox">
+        <h2 class="hidden">lightbox</h2>
+        <!-- close button -->
+        <a href="" class="lightbox_close">x</a>
+        <article class="col-span-full">
+            <img src="images/logo.svg" alt="Twitter">
+            <h3 class="lb_heading">Product Name</h3>
+
+            <p class="lb_text">
+                Product Info
+            </p>
+        </article>
+    </section>
+    <script src="js/product_data.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
