@@ -4,14 +4,10 @@
     1.  General Styles
     2.  Main Nav
     3.  Main Hero
-    4.  Main Hero Image Contact
-    5.  Why Couples Resort
-    6.  About & FAQ
-    7.  Contact Form
-    8.  Footer
-    9.  Custom Queries
-    10. Tablet Queries
-    11. Desktop Queries 
+    4.  Main Content
+    5.  Footer
+    6. Tablet Queries
+    7. Desktop Queries 
  */
 
 
@@ -114,7 +110,7 @@ input, textarea {
     display: none;
     margin: auto;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.562)),url(/images/video.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.562)),url(../images/video.webp);
     background-size: cover;
     background-position: bottom;
 }
@@ -126,7 +122,7 @@ input, textarea {
 
 #hero-con {
     height: 200px;
-    background: linear-gradient(rgba(255, 2, 255, 0.45), rgba(0, 0, 0, 0.10)),url(/images/section-separator.jpg);
+    background: linear-gradient(rgba(255, 2, 255, 0.45), rgba(0, 0, 0, 0.10)),url(../images/section-separator.jpg);
     background-size: cover;
     background-position: bottom;
 }
@@ -146,7 +142,7 @@ input, textarea {
 
 
 
- /* 3. ---Main Content--- */
+ /* 4. ---Main Content--- */
 
  #product-teaser {
     margin: auto;
@@ -180,7 +176,7 @@ input, textarea {
     padding-top: 28px;
     padding-bottom: 28px;
     background-color: grey;
-    background: linear-gradient(rgba(148, 11, 175, 0.808), rgba(210, 26, 216, 0.45)),url(/images/section-separator.jpg);
+    background: linear-gradient(rgba(148, 11, 175, 0.808), rgba(210, 26, 216, 0.45)),url(../images/section-separator.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -416,7 +412,7 @@ input, textarea {
     width: 300px;
 }
 
-/* x ---Contact Form---*/
+/* ---Contact Form---*/
 
 #form-section {
     background-color: #f1f1f1;
@@ -475,7 +471,7 @@ button {
 
 /* Form Stuff - END */
 
-/* x ---Footer--- */
+/* 5 ---Footer--- */
 
 #footer {
     background-color: rgb(230, 81, 12);
