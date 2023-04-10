@@ -37,6 +37,10 @@ input, textarea {
     padding: 0;
 }
 
+.active {
+    background-color: #df551e;
+    /* border-bottom: 4px solid #df551e; */
+}
 
 /* 2. ---Main Nav--- */
 #main-logo{
@@ -290,9 +294,11 @@ input, textarea {
 }
 
 #orbitz-card {
+    display: flex; /* Flex to make the product card responsive*/
+    flex-flow: column wrap;
+    align-items: center;
     border: solid 2px rgb(230, 81, 12);
     border-radius: 12px;
-    /* background-color: #e9e9e9; */
     padding: 20px;
     text-align: center;
     margin-top: 10px;
@@ -300,6 +306,7 @@ input, textarea {
 }
 
 #orbitz-card h3 {
+    
     font-size: 22px;
     margin-bottom: 20px;
 }
@@ -324,17 +331,28 @@ input, textarea {
 }
 
 #orbitz-card img {
+    
     height: 380px;
     margin-bottom: 20px;
 }
 
 #orbitz-card p {
+    flex: 1; /* This makes the button align at botton of the card based on p text */
     font-size: 18px;
+    margin-bottom: 25px;
 }
 
 #orbitz-card:hover {
     background-color: #df551e;
     color: #fff;
+}
+
+#orbitz-card button {
+    
+    background-color: #fff;
+    color: #df551e;
+    border: solid 2px #df551e;
+    border-radius: 25px;
 }
 
 #social-wall {
@@ -518,11 +536,92 @@ button {
     background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 75%, rgba(252,176,69,1) 100%);
   }
 
+/* 5. --- Lightbox --- */
 
+.lightbox { 
+    width: 100vw; /* vw = viewport width => screen width */
+    height: 100vh; /* vh = viewport height => screen height */
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(123, 39, 200, 0.95);
+    /* background-image: url('../images/orbitz-orange.png'); */
+    background-repeat: no-repeat;
+
+    background-size: 10vh; /* 55% of the viewport height */
+    background-position: 80px center;
+
+    z-index: 5000;
+
+    display: none;
+
+}
+
+.lightbox_close {
+    position: relative;
+    top: 20px;
+    left: 90%;
+
+    color: white;
+    font-size: 3em;
+
+    text-decoration: none;
+
+    font-weight: bolder;
+}
+
+.lightbox_close:hover { opacity: 0.5; color: red; }
+
+/* .lightbox article {
+    width: 55%;
+    margin-left: 40%;
+    padding-top: 50px;
+} */
+
+.lightbox article h3 {
+    font-family: 'Mulish',Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #df551e;
+    font-size: 32px;
+    margin-top: 60px;
+}
+
+.lightbox article p {
+    font-family: 'Lato',Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+/* .lightbox article img {
+    width: 5%;
+    margin-right: 20px;
+} */
+
+.lb_text, .lb_heading {
+    text-align: left;
+}
+
+.lb_text {
+    line-height: 1.6 !important;
+    margin-left: 0;
+    padding-top: 2em;
+}
+
+/* turn the lightbox on using the :target pseudo selector */
+.lightbox:target { display: block; }
 
 /* 4. ---Tablet--- */
 
 @media screen and (min-width: 768px){
+    .active {
+        background-color: #fff;
+        border-bottom: 4px solid #df551e;
+    }
+
     #hero-con-full{
         display: block;
     }
@@ -738,6 +837,20 @@ button {
         font-size: 20px;
         line-height: 26px;
     }
+
+    .lightbox article {
+        width: 75%;
+        margin-left: 10%;
+        padding-top: 50px;
+        }
+    
+    .lightbox article h3 {
+        font-size: 38px;
+    }
+
+    .lightbox article p {
+        font-size: 22px;
+    }
 }
 
 /* 4. ---Desktop 1920--- */
@@ -801,5 +914,7 @@ button {
         height: 360px;
         width: 640px;
     }
+
+    
 
 }
